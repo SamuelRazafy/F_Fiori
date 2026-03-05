@@ -1,0 +1,90 @@
+<mvc:View
+    controllerName="sap.ui.demo.zlistperssam.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="idPage"
+        title="{i18n>title}"
+    >
+        <content>
+            <Table
+                id="idZlistPersSAMSetTable"
+                items="{/ZLIST_PERS_SAMSet}"
+                mode="SingleSelectMaster"
+            >
+                <columns>
+                    <Column id="id1Column">
+                        <Text
+                            id="idIdentifiantText"
+                            text="Identifiant"
+                        />
+                    </Column>
+                    <Column id="id2Column">
+                        <Text
+                            id="idNomText"
+                            text="Nom"
+                        />
+                    </Column>
+                    <Column id="id3Column">
+                        <Text
+                            id="idPrnomsText"
+                            text="Prénoms"
+                        />
+                    </Column>
+                    <Column
+                        id="id4Column"
+                        width="80px"
+                    >
+                        <Text
+                            id="idActionsText"
+                            text="Actions"
+                        />
+                    </Column>
+                </columns>
+                <items>
+                    <ColumnListItem id="idColumnListItem">
+                        <cells>
+                            <Text
+                                id="idIdentifiant2Text"
+                                text="{Identifiant}"
+                            />
+                            <Text
+                                id="idNom2Text"
+                                text="{Nom}"
+                            />
+                            <Text
+                                id="idPrenomsText"
+                                text="{Prenoms}"
+                            />
+                            <Button
+                                id="id5Button"
+                                icon="sap-icon://delete"
+                                type="Transparent"
+                                press="onButtonSupPress"
+                                tooltip="Supprimer cette ligne"
+                            />
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+        <footer>
+            <Toolbar id="idToolbar">
+                <ToolbarSpacer id="idToolbarSpacer" />
+                <Button
+                    id="idCrerButton"
+                    text="Créer"
+                    press="onCrerButtonPress"
+                    type="Emphasized"
+                />
+                <Button
+                    id="idRafrachirButton"
+                    text="Rafraîchir"
+                    press="onRafrachirButtonPress"
+                />
+            </Toolbar>
+        </footer>
+    </Page>
+</mvc:View>

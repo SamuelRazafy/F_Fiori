@@ -1,0 +1,24 @@
+<core:FragmentDefinition
+    xmlns="sap.m"                          
+    xmlns:core="sap.ui.core">
+
+    <Dialog id="idCreateDialog" title="Nouveau personnel"
+        class="sapUiResponsiveContentPadding"
+        draggable="true"
+        resizable="true">
+        <VBox id="idVBox">
+            <Label id="idIdentifiantLabel"  text="Identifiant"/>
+            <Input id="idIdentifiantInput"  value="{Identifiant}"/>
+            <Label id="idNomLabel"  text="Nom"/>
+            <Input id="idNomInput"  value="{Nom}"/>
+            <Label id="idPrnomsLabel"  text="Prénoms"/>
+            <Input id="idPrenomsInput"  value="{Prenoms}"/>
+        </VBox>
+
+        <buttons>
+            <Button id="idSauvegarderButton"  text="Sauvegarder" press="onSauvegarderButtonPress" type="Emphasized"/>
+            <Button id="idAnnulerButton" text="Annuler" press="onAnnulerButtonPress"/>
+        </buttons>
+    </Dialog>
+
+</core:FragmentDefinition>
